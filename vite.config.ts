@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => ({
     headers: {
       'Cross-Origin-Embedder-Policy': 'require-corp',
       'Cross-Origin-Opener-Policy': 'same-origin',
+      'Content-Type': 'application/javascript',
     }
   },
   plugins: [
@@ -32,6 +33,9 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: undefined,
         format: 'es',
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
       },
     },
   }
