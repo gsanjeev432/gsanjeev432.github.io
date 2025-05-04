@@ -27,8 +27,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          VITE_BASE_URL: '/gsanjeev432.github.io/'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -44,3 +42,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_ENV: production
+          VITE_BASE_URL: '/'

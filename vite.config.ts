@@ -8,11 +8,6 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    headers: {
-      'Cross-Origin-Embedder-Policy': 'require-corp',
-      'Cross-Origin-Opener-Policy': 'same-origin',
-      'Content-Type': 'application/javascript',
-    }
   },
   plugins: [
     react(),
@@ -24,7 +19,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/gsanjeev432.github.io/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
